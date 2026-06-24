@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.9.1)
+  - Kingfisher (6.3.1)
+  - LookinServer (1.2.8):
+    - LookinServer/Core (= 1.2.8)
+  - LookinServer/Core (1.2.8)
+  - SnapKit (5.6.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.9)
+  - Kingfisher (~> 6.0)
+  - LookinServer
+  - SnapKit (~> 5.0)
+  - YYKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - LookinServer
+    - SnapKit
+    - YYKit
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  LookinServer: 1b2b61c6402ae29fa22182d48f5cd067b4e99e80
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: cbbad38a9af1d9a8002fabf4f40091ef039753c9
+
+COCOAPODS: 1.10.1
