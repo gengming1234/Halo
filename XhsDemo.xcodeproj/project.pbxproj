@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12A64B122F31D59B0068D20B /* xiaohongshu.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A64B112F31D59B0068D20B /* xiaohongshu.json */; };
 		9ACB3D5D757ABAC247FE4807 /* Pods_XhsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E660325A1F5FCBE88858062 /* Pods_XhsDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12A64AD72F31D0210068D20B /* XhsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XhsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		12A64B112F31D59B0068D20B /* xiaohongshu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = xiaohongshu.json; sourceTree = "<group>"; };
 		34C35DAB7733EFEA23C395D3 /* Pods-XhsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XhsDemo.debug.xcconfig"; path = "Target Support Files/Pods-XhsDemo/Pods-XhsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8E660325A1F5FCBE88858062 /* Pods_XhsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XhsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC1C30B8AE08DA2488C0E72 /* Pods-XhsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XhsDemo.release.xcconfig"; path = "Target Support Files/Pods-XhsDemo/Pods-XhsDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 		12A64ACE2F31D0210068D20B = {
 			isa = PBXGroup;
 			children = (
-				12A64B112F31D59B0068D20B /* xiaohongshu.json */,
 				12A64AD92F31D0210068D20B /* XhsDemo */,
 				12A64AD82F31D0210068D20B /* Products */,
 				200408470DA06E0A689003B7 /* Pods */,
@@ -151,7 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12A64B122F31D59B0068D20B /* xiaohongshu.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +219,10 @@
 					"*.gitignore",
 					LICENSE,
 					"session-start",
+					".codewiz",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					xiaohongshu.json,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XhsDemo/Info.plist;
@@ -279,6 +279,10 @@
 					"*.gitignore",
 					LICENSE,
 					"session-start",
+					".codewiz",
+				);
+				INCLUDED_SOURCE_FILE_NAMES = (
+					xiaohongshu.json,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XhsDemo/Info.plist;

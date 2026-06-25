@@ -22,6 +22,7 @@ final class LiveRoomBottomBar: UIView {
         addSubview(blur)
         blur.snp.makeConstraints { $0.edges.equalToSuperview() }
 
+        // 必须先 addSubview，再设置约束，保证视图层级一致
         addSubview(commentField)
         addSubview(likeButton)
         addSubview(shareButton)

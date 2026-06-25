@@ -179,6 +179,15 @@ final class LiveRoomHeaderView: UIView {
         container.backgroundColor    = UIColor.black.withAlphaComponent(0.3)
         container.layer.cornerRadius = 28
 
+        // 必须先将 container 加入视图层级，再对其子视图设置约束，
+        // 否则子视图与父视图没有公共祖先，AutoLayout 会抛出 "no common ancestor" 崩溃
+        addSubview(container)
+        container.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(16)
+            make.centerY.equalToSuperview()
+            make.height.equalTo(56)
+        }
+
         [avatarView, nameStack, liveTagView].forEach { container.addSubview($0) }
 
         avatarView.snp.makeConstraints { make in
@@ -194,13 +203,6 @@ final class LiveRoomHeaderView: UIView {
             make.leading.equalTo(nameStack.snp.trailing).offset(10)
             make.centerY.equalToSuperview()
             make.trailing.equalToSuperview().offset(-12)
-        }
-
-        addSubview(container)
-        container.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(16)
-            make.centerY.equalToSuperview()
-            make.height.equalTo(56)
         }
     }
 }

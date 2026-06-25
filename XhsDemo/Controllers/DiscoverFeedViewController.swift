@@ -44,8 +44,11 @@ final class DiscoverFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        setupCategoryBar()
+        // setupLiveList 必须在 setupCategoryBar 之前调用：
+        // setupCategoryBar 里的 secondaryScrollView 约束引用了 liveListVC.view.snp.bottom，
+        // 而 liveListVC.view 必须先 addSubview 到视图树，否则两者无公共祖先导致约束崩溃。
         setupLiveList()
+        setupCategoryBar()
         setupCollectionView()
         setupReorderGesture()
         bindViewModel()
