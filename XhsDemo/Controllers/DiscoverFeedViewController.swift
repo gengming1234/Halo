@@ -239,9 +239,10 @@ extension DiscoverFeedViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         let note = viewModel.note(at: indexPath.item)
-        let detailVM = NoteDetailViewModel(note: note)
-        let detailVC = NoteDetailViewController(viewModel: detailVM)
-        navigationItem.backButtonTitle = ""
-        navigationController?.pushViewController(detailVC, animated: true)
+        // 通过路由系统跳转，不直接依赖 NoteDetailViewController
+        // AppRouter 会：1) 创建空 Context  2) 让我们填数据  3) 创建 VC  4) 执行 push
+        AppRouter.shared.navigate(to: NoteDetailRoutable.self, from: self) { context in
+            (context as? NoteDetailContext)?.note = note
+        }
     }
 }

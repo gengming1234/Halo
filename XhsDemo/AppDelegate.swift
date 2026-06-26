@@ -4,6 +4,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // 路由注册：告诉 AppRouter 每个"招牌协议"对应哪个 Router
+        // 如果不注册，navigate(to:) 查不到 Router，跳转会直接失败并打印警告
+        AppRouter.shared.register(NoteDetailRoutable.self, router: NoteDetailRouter.self)
+        AppRouter.shared.register(LiveRoomRoutable.self,   router: LiveRoomRouter.self)
         return true
     }
 

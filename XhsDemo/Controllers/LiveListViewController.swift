@@ -50,10 +50,11 @@ extension LiveListViewController: UICollectionViewDataSource, UICollectionViewDe
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let room   = rooms[indexPath.item]
-        let vm     = LiveRoomViewModel(room: room)
-        let roomVC = LiveRoomViewController(viewModel: vm)
-        present(roomVC, animated: true)
+        let room = rooms[indexPath.item]
+        // 通过路由系统跳转，不直接依赖 LiveRoomViewController
+        AppRouter.shared.navigate(to: LiveRoomRoutable.self, from: self) { context in
+            (context as? LiveRoomContext)?.room = room
+        }
     }
 }
 
